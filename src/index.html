@@ -3,8 +3,34 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>angular-node-cookbook</title>
+    <style>
+        .ng-cloak {
+            display: none !important;
+        }
+    </style>
 </head>
-<body>
+<body ng-controller="mainCtrl as vm" class="ng-cloak">
 
+    <h1>Hello!</h1>
+
+    <p>{{vm.message}} {{vm.today | date:'fullDate'}}</p>
+
+<script src="jspm_packages/system.js"></script>
+<script src="config.js"></script>
+<script>
+    Promise
+        .all([
+            System.import('angular'),
+            System.import('js/app/mainCtrl')
+        ])
+        .then(function(modules) {
+            var angular = modules[0];
+            angular.bootstrap(document, ['mainApp']);
+        })
+        .catch(function(err) {
+            console.log("Bootstrap error:");
+            console.log(err);
+        });
+</script>
 </body>
 </html>
