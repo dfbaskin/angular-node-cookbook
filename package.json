@@ -1,0 +1,23 @@
+{
+  "name": "angular-node-cookbook",
+  "version": "1.0.0",
+  "description": "Examples for building AngularJS applications in NodeJS.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dfbaskin/angular-node-cookbook.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "Node"
+  ],
+  "author": "Dave Baskin <dbaskin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfbaskin/angular-node-cookbook/issues"
+  },
+  "homepage": "https://github.com/dfbaskin/angular-node-cookbook#readme"
+}
