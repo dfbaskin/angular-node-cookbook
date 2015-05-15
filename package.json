@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/dfbaskin/angular-node-cookbook/issues"
   },
-  "homepage": "https://github.com/dfbaskin/angular-node-cookbook#readme"
+  "homepage": "https://github.com/dfbaskin/angular-node-cookbook#readme",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
 }
