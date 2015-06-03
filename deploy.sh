@@ -114,6 +114,9 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD install --production
   exitWithMessageOnError "npm failed"
+  # if the jspm install command fails, clearing the cache seems to fix it.
+  eval "node_modules/.bin/jspm" cache-clear
+  exitWithMessageOnError "jspm cache clear failed"
   eval "node_modules/.bin/jspm" install
   exitWithMessageOnError "jspm failed"
   cd - > /dev/null
