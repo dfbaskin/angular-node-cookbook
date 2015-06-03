@@ -112,6 +112,8 @@ selectNodeVersion
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
+  eval $NPM_CMD install -g npm@latest
+  exitWithMessageOnError "npm global update failed"
   eval $NPM_CMD install --production
   exitWithMessageOnError "npm failed"
   # if the jspm install command fails, clearing the cache seems to fix it.
