@@ -114,7 +114,7 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD install --production
   exitWithMessageOnError "npm failed"
-  eval "$NODE_EXE" "node_modules/jspm/jspm.js" install
+  eval "\"$NODE_EXE\"" "node_modules/jspm/jspm.js" install
   exitWithMessageOnError "jspm failed"
   cd - > /dev/null
 fi
